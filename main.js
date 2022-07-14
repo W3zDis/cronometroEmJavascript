@@ -30,7 +30,7 @@ ativado = !ativado
     inicio.style.backgroundColor = ('cornflowerblue')
     document.getElementById("iniciar").innerText = "Iniciar"
     document.getElementById("reiniciaTimer").innerText = "Restaurar"
-    timerAtivo = false
+    timerAtivo = !timerAtivo
     console.log(timerAtivo)
 
 
@@ -41,7 +41,7 @@ ativado = !ativado
     inicio.style.backgroundColor = ('red')
     document.getElementById("iniciar").innerText = "Parar"
     document.getElementById("reiniciaTimer").innerText = "Retornar"
-    timerAtivo = !timerAtivo
+    timerAtivo = false
     console.log(timerAtivo)
 
   }
