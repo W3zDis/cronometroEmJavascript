@@ -1,5 +1,6 @@
 th = "";
 let timerAtivo = true
+let resetValor = document.getElementById('reiniciaTimer')
 let s = 0
 let m = 0
 let h = 0
@@ -10,6 +11,10 @@ const inicio = document.getElementById('iniciar')
 
 
 //INICIO INTERAÇÕES
+
+
+
+
 inicio.addEventListener('click', evt => {
 
 
@@ -40,11 +45,15 @@ ativado = !ativado
   } else {
     inicio.style.backgroundColor = ('red')
     document.getElementById("iniciar").innerText = "Parar"
-    document.getElementById("reiniciaTimer").innerText = "Retornar"
+    document.getElementById("reiniciaTimer").innerText = "Restaurar"
     timerAtivo = false
     console.log(timerAtivo)
 
   }
+})
+
+resetValor.addEventListener('click', evt => {
+  resetFunc()
 })
 //FIM INTERAÇÕES
 //FUNCTIONS
@@ -60,6 +69,11 @@ function timerS() {
   }
 }
 
+function resetFunc() {
+  s = 0
+  n = 0
+  h = 0
+}
 
 
 //FIM FUNCTIONS
